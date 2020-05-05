@@ -77,11 +77,6 @@ target 'wbooks' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'wbooksTests' do
-    inherit! :complete
-    # Pods for testing
-  end
-
   use_native_modules!
 
   # Enables Flipper.
@@ -91,14 +86,5 @@ target 'wbooks' do
   add_flipper_pods!
   post_install do |installer|
     flipper_post_install(installer)
-  end
-end
-
-target 'wbooks-tvOS' do
-  # Pods for wbooks-tvOS
-
-  target 'wbooks-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
   end
 end
