@@ -1,13 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
 import React from 'react';
 import {
   SafeAreaView,
@@ -15,60 +5,29 @@ import {
   ScrollView,
   View,
   Text,
-  StatusBar
+  StatusBar,
+  Image
 } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions
-} from 'react-native/Libraries/NewAppScreen';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
-declare const global: { HermesInternal: null | {} };
+import { ALICE_BLUE, CHARCOAL } from '../constants/colors';
 
 const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
+      <SafeAreaView style={styles.container}>
+        <ScrollView style={styles.scrollView}>
+          <View style={styles.bookContainer}>
+            <Image
+              style={styles.bookImg}
+              source={require('./assets/img_book1@3x.png.png')}
+            />
+            <View style={styles.decriptionContainer}>
+              <Text style={styles.title}>A Little Bird Told Me</Text>
+              <Text style={styles.author}>Timothy Cross</Text>
             </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.tsx</Text> to change
-                this screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -77,41 +36,50 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: ALICE_BLUE,
+    flex: 1
+  },
   scrollView: {
-    backgroundColor: Colors.lighter
+    paddingHorizontal: 20,
+    paddingVertical: 10
   },
-  engine: {
-    position: 'absolute',
-    right: 0
+  bookContainer: {
+    backgroundColor: Colors.white,
+    borderRadius: 5,
+    elevation: 2,
+    margin: 2,
+    display: 'flex',
+    flexDirection: 'row',
+    paddingVertical: 15,
+    paddingLeft: 30,
+    shadowOffset: {
+      width: 0,
+      height: 1
+    },
+    shadowOpacity: 0.1
   },
-  body: {
-    backgroundColor: Colors.white
+  bookImg: {
+    height: 60,
+    width: 40
   },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24
+  decriptionContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    paddingLeft: 20
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black
+  title: {
+    fontSize: 17,
+    fontWeight: 'bold',
+    color: CHARCOAL,
+    lineHeight: 20
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark
-  },
-  highlight: {
-    fontWeight: '700'
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right'
+  author: {
+    fontSize: 15,
+    fontWeight: '300',
+    color: CHARCOAL,
+    lineHeight: 18,
+    paddingTop: 5
   }
 });
 
