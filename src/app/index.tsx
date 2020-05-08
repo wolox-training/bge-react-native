@@ -20,7 +20,8 @@ const App = () => {
               title={item.title}
               author={item.author}
             />
-          )}></FlatList>
+          )}
+        />
       </SafeAreaView>
     </>
   );
