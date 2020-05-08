@@ -1,11 +1,10 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, StatusBar, FlatList } from 'react-native';
+import { SafeAreaView, FlatList, StatusBar } from 'react-native';
 
 import Book from './components/Book';
 
 import { BOOKS } from './mockupData';
-
-import { ALICE_BLUE } from '../constants/colors';
+import styles from './styles';
 
 const App = () => {
   return (
@@ -26,13 +25,5 @@ const App = () => {
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: ALICE_BLUE,
-    flex: 1,
-    paddingTop: 10
-  }
-});
 
 export default App;
