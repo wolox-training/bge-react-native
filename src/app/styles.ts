@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
   },
   decriptionContainer: {
     display: 'flex',
-    flexDirection: 'column',
     paddingLeft: 20
   },
   title: {
