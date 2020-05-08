@@ -9,9 +9,9 @@ import {
   Image
 } from 'react-native';
 
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import bookImage from './assets/img_book1.png';
 
-import { ALICE_BLUE, CHARCOAL } from '../constants/colors';
+import { ALICE_BLUE, CHARCOAL, WHITE } from '../constants/colors';
 
 const App = () => {
   return (
@@ -22,7 +22,8 @@ const App = () => {
           <View style={styles.bookContainer}>
             <Image
               style={styles.bookImg}
-              source={require('./assets/img_book1@3x.png.png')}
+              source={require(bookImage)}
+              resizeMode="contain"
             />
             <View style={styles.decriptionContainer}>
               <Text style={styles.title}>A Little Bird Told Me</Text>
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10
   },
   bookContainer: {
-    backgroundColor: Colors.white,
+    backgroundColor: WHITE,
     borderRadius: 5,
     elevation: 2,
     margin: 2,
