@@ -1,7 +1,6 @@
 import React from 'react';
 import { SafeAreaView, FlatList, StatusBar } from 'react-native';
-
-import Book from './components/Book';
+import Book from '@components/Book';
 
 import { BOOKS } from './mockupData';
 import styles from './styles';
@@ -13,13 +12,9 @@ const App = () => {
       <SafeAreaView style={styles.container}>
         <FlatList
           data={BOOKS}
-          renderItem={({ item }) => (
-            <Book
-              url={item.image_url}
-              title={item.title}
-              author={item.author}
-            />
-          )}
+          keyExtractor={item => item.id}
+          renderItem={({ item }) => <Book uri={item.image_url} title={item.title} author={item.author} />}
+          style={styles.list}
         />
       </SafeAreaView>
     </>
