@@ -25,7 +25,9 @@ function BookList({ books }: Props) {
 
   const keyExtractor = ({ id }: Book) => `${id}`;
 
-  return <FlatList data={books} keyExtractor={keyExtractor} renderItem={renderItem} style={styles.list} />;
+  return (
+    <FlatList<Book> data={books} keyExtractor={keyExtractor} renderItem={renderItem} style={styles.list} />
+  );
 }
 
 export default BookList;
