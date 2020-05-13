@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
-
-import placeholderBookImg from '../../assets/img_book6.png';
+import placeholderBookImg from '@assets/img_book6.png';
 
 import styles from './styles';
 
