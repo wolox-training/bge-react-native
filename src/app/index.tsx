@@ -1,15 +1,8 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-  Image
-} from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
+import BookList from '@components/BookList';
 
-import bookImage from './assets/img_book1.png';
-
+import { BOOKS } from './mockupData';
 import styles from './styles';
 
 const App = () => {
@@ -17,15 +10,7 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.container}>
-        <ScrollView style={styles.scrollView}>
-          <View style={styles.bookContainer}>
-            <Image source={bookImage} resizeMode="contain" />
-            <View style={styles.decriptionContainer}>
-              <Text style={styles.title}>A Little Bird Told Me</Text>
-              <Text style={styles.author}>Timothy Cross</Text>
-            </View>
-          </View>
-        </ScrollView>
+        <BookList books={BOOKS} />
       </SafeAreaView>
     </>
   );
