@@ -1,10 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-import { CHARCOAL } from '@constants/colors';
+import { CHARCOAL, WHITE } from '@constants/colors';
 
 const styles = StyleSheet.create({
   bookContainer: {
-    backgroundColor: Colors.white,
+    backgroundColor: WHITE,
     borderRadius: 5,
     display: 'flex',
     elevation: 2,
@@ -21,7 +20,6 @@ const styles = StyleSheet.create({
   },
   decriptionContainer: {
     display: 'flex',
-    flexDirection: 'column',
     paddingLeft: 20,
     flex: 1
   },
