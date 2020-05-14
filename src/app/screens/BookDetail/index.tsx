@@ -6,7 +6,7 @@ function BookDetail({ navigation }: navigationProps) {
   const handleGoBack = () => navigation.goBack();
 
   return (
-    <TouchableHighlight activeOpacity={0.6} onPress={handleGoBack}>
+    <TouchableHighlight onPress={handleGoBack}>
       <Text>Go Back</Text>
     </TouchableHighlight>
   );
