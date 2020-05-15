@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, ListRenderItem, GestureResponderEvent } from 'react-native';
+import { FlatList, ListRenderItem } from 'react-native';
 import Book from '@components/Book';
 
 import styles from './styles';
@@ -16,7 +16,7 @@ interface Book {
 
 interface Props {
   books: Book[];
-  onPress: (event: GestureResponderEvent) => void;
+  onPress: () => void;
 }
 
 function BookList({ books, onPress }: Props) {
