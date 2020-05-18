@@ -16,11 +16,12 @@ interface Book {
 
 interface Props {
   books: Book[];
+  onPress: () => void;
 }
 
-function BookList({ books }: Props) {
+function BookList({ books, onPress }: Props) {
   const renderItem: ListRenderItem<Book> = ({ item }) => (
-    <Book imageUrl={item.imageUrl} title={item.title} author={item.author} />
+    <Book imageUrl={item.imageUrl} title={item.title} author={item.author} onPress={onPress} />
   );
 
   const keyExtractor = ({ id }: Book) => `${id}`;
