@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { RootStackParamList } from '@interfaces/stack';
 import { ROUTES } from '@constants/routes';
+import { DEFAULT_NAV_OPTIONS } from '@constants/header';
 
 import Library from './screens/Library';
 import BookDetail from './screens/BookDetail';
@@ -14,8 +15,8 @@ const Stack = createStackNavigator<RootStackParamList>();
 const App = () => {
   return (
     <NavigationContainer>
-      <StatusBar barStyle="dark-content" />
-      <Stack.Navigator>
+      <StatusBar barStyle="light-content" />
+      <Stack.Navigator screenOptions={DEFAULT_NAV_OPTIONS}>
         <Stack.Screen
           name={ROUTES.LIBRARY.NAME}
           options={{ title: ROUTES.LIBRARY.TITLE }}
