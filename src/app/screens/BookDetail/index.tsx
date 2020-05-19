@@ -1,15 +1,13 @@
 import React from 'react';
-import { TouchableOpacity, Text } from 'react-native';
-import { NavigationProps } from '@interfaces/navigation';
 
-function BookDetail({ navigation }: NavigationProps) {
-  const handleGoBack = () => navigation.goBack();
+import { BOOKS } from '../Library/mockupData';
 
-  return (
-    <TouchableOpacity onPress={handleGoBack}>
-      <Text>Go Back</Text>
-    </TouchableOpacity>
-  );
+import BookCard from './components/BookCard';
+
+function BookDetail() {
+  const { imageUrl, title, author, genre, year } = BOOKS[1];
+
+  return <BookCard imageUrl={imageUrl} title={title} author={author} genre={genre} year={year} />;
 }
 
 export default BookDetail;

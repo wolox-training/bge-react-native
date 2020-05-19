@@ -21,7 +21,7 @@ export const BOOKS = [
     id: '3',
     author: 'Lois Duncan',
     title: 'Locked in time',
-    genre: 'suspense',
+    genre: 'Suspense',
     publisher: 'Little, Brown',
     year: '1985',
     imageUrl: 'http://wolox-training.s3.amazonaws.com/uploads/6942334-M.jpg'
@@ -30,7 +30,7 @@ export const BOOKS = [
     id: '4',
     author: 'Christopher Pike',
     title: 'Scavenger Hunt',
-    genre: 'suspense',
+    genre: 'Suspense',
     publisher: 'Pocket Books',
     year: '1989',
     imageUrl: 'http://wolox-training.s3.amazonaws.com/uploads/6963511-M.jpg'
@@ -39,7 +39,7 @@ export const BOOKS = [
     id: '5',
     author: 'Christopher Pike',
     title: 'Scavenger Hunt',
-    genre: 'suspense',
+    genre: 'Suspense',
     publisher: 'Pocket Books',
     year: '1989',
     imageUrl: 'http://wolox-training.s3.amazonaws.com/uploads/6963511-M.jpg'
@@ -48,7 +48,7 @@ export const BOOKS = [
     id: '6',
     author: 'Paula Hawkins',
     title: 'The Girl on the Train\n',
-    genre: 'suspense',
+    genre: 'Suspense',
     publisher: 'Riverhead Books',
     year: '2015',
     imageUrl: 'http://wolox-training.s3.amazonaws.com/uploads/content.jpeg'
@@ -57,7 +57,7 @@ export const BOOKS = [
     id: '7',
     author: 'Anthony Doerr',
     title: 'All the Light We Cannot See',
-    genre: 'suspense',
+    genre: 'Suspense',
     publisher: 'Scribner',
     year: '2014',
     imageUrl: 'http://wolox-training.s3.amazonaws.com/uploads/content.jpeg'
