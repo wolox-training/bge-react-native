@@ -7,5 +7,5 @@ export const DEFAULT_NAV_OPTIONS = {
   headerBackground: ImageHeader,
   headerTintColor: WHITE,
   headerTitleStyle: { fontWeight: 'bold' },
-  headerStyle: { height: HEADER_HEIGHT, shadowColor: 'transparent' }
+  headerStyle: { backgroundColor: 'transparent', height: HEADER_HEIGHT, shadowColor: 'transparent' }
 } as const;
