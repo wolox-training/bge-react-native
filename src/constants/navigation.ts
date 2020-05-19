@@ -1,7 +1,7 @@
 import ImageHeader from '@components/ImageHeader';
 import { WHITE } from '@constants/colors';
 
-import { HEADER_HEIGHT } from './sizes';
+import { HEADER_HEIGHT } from './dimensions';
 
 export const DEFAULT_NAV_OPTIONS = {
   headerBackground: ImageHeader,

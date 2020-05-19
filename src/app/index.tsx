@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { RootStackParamList } from '@interfaces/stack';
 import { ROUTES } from '@constants/routes';
-import { DEFAULT_NAV_OPTIONS } from '@constants/header';
+import { DEFAULT_NAV_OPTIONS } from '@constants/navigation';
 
 import Library from './screens/Library';
 import BookDetail from './screens/BookDetail';
