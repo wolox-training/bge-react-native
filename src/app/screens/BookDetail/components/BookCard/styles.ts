@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { CHARCOAL, WHITE, ATLANTIS } from '@constants/colors';
+import { CHARCOAL, WHITE, ATLANTIS, VENETIAN_RED } from '@constants/colors';
 
 const styles = StyleSheet.create({
   bookCardContainer: {
@@ -27,26 +27,34 @@ const styles = StyleSheet.create({
     marginLeft: 15
   },
   title: {
+    color: CHARCOAL,
     fontSize: 24,
     fontWeight: 'bold',
-    color: CHARCOAL,
     lineHeight: 25
   },
-  available: {
+  availability: {
     fontSize: 17,
-    color: ATLANTIS,
     fontWeight: 'bold'
   },
+  available: {
+    color: ATLANTIS
+  },
+  notAvailable: {
+    color: VENETIAN_RED
+  },
   author: {
-    fontSize: 15,
     color: CHARCOAL,
-    paddingTop: 5,
-    lineHeight: 10
+    fontSize: 15,
+    lineHeight: 12,
+    paddingTop: 5
   },
   bookImage: {
     height: '100%',
-    minWidth: 70,
-    maxWidth: 100
+    width: 70
+  },
+  buttonMargin: {
+    marginBottom: 10,
+    marginTop: 30
   }
 });
 
