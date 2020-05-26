@@ -1,8 +1,8 @@
 import React from 'react';
 import { FlatList, ListRenderItem } from 'react-native';
-import Book from '@components/Book';
 import { Book as BookProps } from '@interfaces/book';
 
+import Book from './components/Book';
 import styles from './styles';
 
 interface Props {
