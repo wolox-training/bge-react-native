@@ -33,14 +33,12 @@ const styles = StyleSheet.create({
     lineHeight: 25
   },
   availability: {
+    color: VENETIAN_RED,
     fontSize: 17,
     fontWeight: 'bold'
   },
   available: {
     color: ATLANTIS
-  },
-  notAvailable: {
-    color: VENETIAN_RED
   },
   author: {
     color: CHARCOAL,
@@ -49,8 +47,8 @@ const styles = StyleSheet.create({
     paddingTop: 5
   },
   bookImage: {
-    height: '100%',
-    width: 70
+    height: 105,
+    width: 69
   },
   buttonMargin: {
     marginBottom: 10,

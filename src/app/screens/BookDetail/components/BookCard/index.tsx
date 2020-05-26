@@ -2,19 +2,11 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import placeholderBookImg from '@assets/img_book6.png';
 import Button from '@components/Button';
+import { Book } from '@interfaces/book';
 
 import styles from './styles';
 
-interface Props {
-  imageUrl: string | null;
-  title: string;
-  author: string;
-  genre: string;
-  year: string;
-  isAvailable: boolean;
-}
-
-function BookCard({ imageUrl, title, author, genre, year, isAvailable }: Props) {
+function BookCard({ imageUrl, title, author, genre, year, isAvailable }: Book) {
   return (
     <View style={styles.bookCardContainer}>
       <View style={styles.detailContainer}>
@@ -24,8 +16,10 @@ function BookCard({ imageUrl, title, author, genre, year, isAvailable }: Props) 
           source={imageUrl ? { uri: imageUrl } : placeholderBookImg}
         />
         <View style={styles.bookDescription}>
-          <Text style={styles.title}>{title}</Text>
-          <Text style={[styles.availability, isAvailable ? styles.available : styles.notAvailable]}>
+          <Text numberOfLines={1} style={styles.title}>
+            {title}
+          </Text>
+          <Text style={[styles.availability, isAvailable && styles.available]}>
             {isAvailable ? 'Available' : 'Not Available'}
           </Text>
           <Text style={styles.author}>{author}</Text>
@@ -33,10 +27,8 @@ function BookCard({ imageUrl, title, author, genre, year, isAvailable }: Props) 
           <Text style={styles.author}>{genre}</Text>
         </View>
       </View>
-      <Button type="primary" style={styles.buttonMargin}>
-        ADD TO WISHLIST
-      </Button>
-      <Button type="secondary">RENT</Button>
+      <Button style={styles.buttonMargin}>ADD TO WISHLIST</Button>
+      <Button secondary>RENT</Button>
     </View>
   );
 }

@@ -1,33 +1,29 @@
 import React from 'react';
 import { FlatList, ListRenderItem } from 'react-native';
 import Book from '@components/Book';
+import { Book as BookProps } from '@interfaces/book';
 
 import styles from './styles';
 
-interface Book {
-  id: string;
-  genre: string;
-  publisher: string;
-  year: string;
-  imageUrl: string | null;
-  title: string;
-  author: string;
-}
-
 interface Props {
-  books: Book[];
-  onPress: () => void;
+  books: BookProps[];
+  onPress: (book: BookProps) => () => void;
 }
 
 function BookList({ books, onPress }: Props) {
-  const renderItem: ListRenderItem<Book> = ({ item }) => (
-    <Book imageUrl={item.imageUrl} title={item.title} author={item.author} onPress={onPress} />
+  const renderItem: ListRenderItem<BookProps> = ({ item }) => (
+    <Book imageUrl={item.imageUrl} title={item.title} author={item.author} onPress={onPress(item)} />
   );
 
-  const keyExtractor = ({ id }: Book) => `${id}`;
+  const keyExtractor = ({ id }: BookProps) => `${id}`;
 
   return (
-    <FlatList<Book> data={books} keyExtractor={keyExtractor} renderItem={renderItem} style={styles.list} />
+    <FlatList<BookProps>
+      data={books}
+      keyExtractor={keyExtractor}
+      renderItem={renderItem}
+      style={styles.list}
+    />
   );
 }
 

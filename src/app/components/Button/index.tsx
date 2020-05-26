@@ -5,15 +5,14 @@ import styles from './styles';
 
 interface Props {
   children: string;
-  type: 'primary' | 'secondary';
+  secondary?: boolean;
   style?: StyleProp<ViewStyle>;
 }
 
-function Button({ children, type, style }: Props) {
-  const textStyle = type === 'secondary' ? styles.primaryText : styles.secondaryText;
+function Button({ children, secondary, style }: Props) {
   return (
-    <TouchableOpacity style={[styles.button, styles[type], style]}>
-      <Text style={[styles.text, textStyle]}>{children}</Text>
+    <TouchableOpacity style={[styles.button, secondary && styles.secondary, style]}>
+      <Text style={[styles.text, secondary && styles.secondaryText]}>{children}</Text>
     </TouchableOpacity>
   );
 }

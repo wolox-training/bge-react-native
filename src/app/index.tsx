@@ -16,7 +16,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <StatusBar barStyle="light-content" />
-      <Stack.Navigator screenOptions={DEFAULT_NAV_OPTIONS}>
+      <Stack.Navigator initialRouteName={ROUTES.LIBRARY.NAME} screenOptions={DEFAULT_NAV_OPTIONS}>
         <Stack.Screen
           name={ROUTES.LIBRARY.NAME}
           options={{ title: ROUTES.LIBRARY.TITLE }}
