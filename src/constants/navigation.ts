@@ -1,9 +1,10 @@
 import ImageHeader from '@components/ImageHeader';
-import { WHITE } from '@constants/colors';
+import { WHITE, ALICE_BLUE } from '@constants/colors';
 
 import { HEADER_HEIGHT } from './dimensions';
 
 export const DEFAULT_NAV_OPTIONS = {
+  cardStyle: { backgroundColor: ALICE_BLUE },
   headerBackground: ImageHeader,
   headerTintColor: WHITE,
   headerTitleStyle: { fontWeight: 'bold' },

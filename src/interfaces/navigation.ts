@@ -1,3 +1,3 @@
 export interface NavigationProps {
-  navigation: { navigate(route: string): void; goBack(): void };
+  navigation: { navigate(route: string, param: {}): void; goBack(): void };
 }

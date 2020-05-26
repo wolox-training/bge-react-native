@@ -1,15 +1,14 @@
 import React from 'react';
-import { TouchableOpacity, Text } from 'react-native';
-import { NavigationProps } from '@interfaces/navigation';
+import { useRoute } from '@react-navigation/native';
+import { BookDetailRouteType } from '@interfaces/routeType';
 
-function BookDetail({ navigation }: NavigationProps) {
-  const handleGoBack = () => navigation.goBack();
+import BookCard from './components/BookCard';
 
-  return (
-    <TouchableOpacity onPress={handleGoBack}>
-      <Text>Go Back</Text>
-    </TouchableOpacity>
-  );
+function BookDetail() {
+  const route: BookDetailRouteType = useRoute();
+  const { book } = route.params;
+
+  return <BookCard {...book} />;
 }
 
 export default BookDetail;
