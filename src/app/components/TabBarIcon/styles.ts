@@ -1,8 +1,9 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1
+  iconImage: {
+    height: 25,
+    width: 25
   }
 });
 
