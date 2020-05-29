@@ -1,9 +1,11 @@
 import { StyleSheet } from 'react-native';
 
+const ICON_SIZE = 25;
+
 const styles = StyleSheet.create({
   iconImage: {
-    height: 25,
-    width: 25
+    height: ICON_SIZE,
+    width: ICON_SIZE
   }
 });
 
