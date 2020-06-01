@@ -15,6 +15,7 @@ module.exports = {
           '@constants': './src/constants',
           '@interfaces': './src/interfaces',
           '@redux': './src/redux',
+          '@screens': './src/app/screens',
           '@services': './src/services',
           '@utils': './src/utils'
         }

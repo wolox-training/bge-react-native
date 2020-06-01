@@ -11,11 +11,12 @@
     "test": "jest",
     "lint": "eslint src --ext .js,.ts,.jsx,.tsx",
     "lint-fix": "eslint . --fix --ext .js,.jsx,.ts,.tsx",
-    "lint-diff": "git diff --name-only --cached --relative | grep -E \"\\.(ts|tsx|js|jsx)$\" | xargs eslint",
+    "lint-diff": "git diff --name-only --cached --no-error-on-unmatched-pattern --relative | grep -E \"\\.(ts|tsx|js|jsx)$\" | xargs eslint",
     "tsc": "tsc"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/bottom-tabs": "^5.5.0",
     "@react-navigation/native": "^5.3.2",
     "@react-navigation/stack": "^5.3.5",
     "react": "16.11.0",
