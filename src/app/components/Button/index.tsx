@@ -7,11 +7,12 @@ interface Props {
   children: string;
   secondary?: boolean;
   style?: StyleProp<ViewStyle>;
+  onPress?: () => void;
 }
 
-function Button({ children, secondary, style }: Props) {
+function Button({ children, secondary, style, onPress }: Props) {
   return (
-    <TouchableOpacity style={[styles.button, secondary && styles.secondary, style]}>
+    <TouchableOpacity style={[styles.button, secondary && styles.secondary, style]} onPress={onPress}>
       <Text style={[styles.text, secondary && styles.secondaryText]}>{children}</Text>
     </TouchableOpacity>
   );
