@@ -1,7 +1,7 @@
 import React from 'react';
+import { ScrollView } from 'react-native';
 import { useRoute } from '@react-navigation/native';
 import { BookDetailRouteType } from '@interfaces/routeType';
-import { ScrollView } from 'react-native-gesture-handler';
 
 import BookCard from './components/BookCard';
 import CommentList from './components/CommentsList';
