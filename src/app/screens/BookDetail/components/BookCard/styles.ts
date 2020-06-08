@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
   bookCardContainer: {
     backgroundColor: WHITE,
     borderRadius: 5,
-    display: 'flex',
     elevation: 2,
     marginHorizontal: 20,
     marginTop: 15,

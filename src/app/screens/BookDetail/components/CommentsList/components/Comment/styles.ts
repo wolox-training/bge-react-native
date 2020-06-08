@@ -3,7 +3,6 @@ import { CHARCOAL } from '@constants/colors';
 
 const styles = StyleSheet.create({
   commentContainer: {
-    display: 'flex',
     flexDirection: 'row',
     marginBottom: 20
   },
@@ -14,7 +13,6 @@ const styles = StyleSheet.create({
     width: 40
   },
   description: {
-    display: 'flex',
     flex: 1,
     paddingLeft: 15
   },

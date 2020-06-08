@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
   bookContainer: {
     backgroundColor: WHITE,
     borderRadius: 5,
-    display: 'flex',
     elevation: 2,
     flexDirection: 'row',
     marginHorizontal: 20,
@@ -19,7 +18,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1
   },
   decriptionContainer: {
-    display: 'flex',
     paddingLeft: 20,
     flex: 1
   },
