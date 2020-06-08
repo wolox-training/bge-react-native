@@ -12,24 +12,19 @@ interface Props {
 }
 
 function CommentList({ comments }: Props) {
-  const [commentsToShow, setCommentToShow] = useState(comments.slice(0, CANT_TO_SHOW));
-  const [isPressed, setIsPressed] = useState(false);
+  const [showAllComments, setShowAllComments] = useState(false);
 
-  const handleViewAll = () => {
-    setCommentToShow(comments.slice(0, CANT_VIEW_ALL));
-    setIsPressed(true);
-  };
+  const toggleViewAllComments = () => setShowAllComments(!showAllComments);
 
   return (
     <View style={styles.commentsContainer}>
-      {commentsToShow.map(comment => (
+      {comments.slice(0, showAllComments ? CANT_VIEW_ALL : CANT_TO_SHOW).map(comment => (
         <Comment key={comment.id} {...comment} />
       ))}
-      {!isPressed && (
-        <Button style={styles.viewAll} onPress={handleViewAll}>
-          View All
-        </Button>
-      )}
+
+      <Button style={styles.viewAll} onPress={toggleViewAllComments}>
+        {showAllComments ? 'View Less' : 'View All'}
+      </Button>
     </View>
   );
 }
